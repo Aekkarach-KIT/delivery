@@ -1,0 +1,426 @@
+.bg-toolbar {
+  background: #db4e59;
+}
+.menu-items {
+  background: #93223e;
+  color: aliceblue;
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  border-radius: 4px;
+  height: 100px;
+}
+.bg-menu {
+  background: #f9d8d3;
+}
+
+.bg-search {
+  background: #d9d4e7;
+  height: 200px;
+  padding: 20px;
+  justify-content: center;
+}
+.font {
+  margin-left: 10px;
+}
+.bg-page {
+  background: #f4effc;
+}
+/* CSS */
+.button {
+  padding: 15px 30px;
+  border-radius: 7px;
+  margin-top: 3px;
+  display: inline-block;
+  width: 100%;
+  height: 65px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 18px;
+  color: black;
+  text-underline-offset: 1000px;
+  z-index: 1;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #db4e59;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:hover {
+  color: #ffffff;
+  border: 1px solid #db4e59;
+}
+
+.button:hover:before {
+  top: -35%;
+  background-color: #db4e59;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button:hover:after {
+  top: -45%;
+  background-color: #db4e59;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.font-s {
+  font-size: 20px;
+}
+/* From uiverse.io by @alexruix */
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  max-width: 190px;
+}
+.select-input {
+  display: block;
+  align-items: center;
+  position: relative;
+  width: 250px;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
+}
+
+
+.input::placeholder {
+  color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+  outline: none;
+  border-color: rgba(234, 76, 137, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #47da99;
+  animation: pop 0.5s;
+  animation-direction: alternate;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cbx1 {
+  position: relative;
+  top: 1px;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #c8ccd4;
+  border-radius: 3px;
+  vertical-align: middle;
+  transition: background 0.1s ease;
+  cursor: pointer;
+  display: block;
+}
+.cbx2 {
+  position: relative;
+  top: 1px;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #c8ccd4;
+  border-radius: 3px;
+  vertical-align: middle;
+  transition: background 0.1s ease;
+  cursor: pointer;
+  display: block;
+}
+.cbx3 {
+  position: relative;
+  top: 1px;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #c8ccd4;
+  border-radius: 3px;
+  vertical-align: middle;
+  transition: background 0.1s ease;
+  cursor: pointer;
+  display: block;
+}
+
+.cbx1:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  width: 7px;
+  height: 14px;
+  opacity: 0;
+  transform: rotate(45deg) scale(0);
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+  transition-delay: 0.15s;
+}
+.cbx2:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  width: 7px;
+  height: 14px;
+  opacity: 0;
+  transform: rotate(45deg) scale(0);
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+  transition-delay: 0.15s;
+}
+
+.cbx3:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  width: 7px;
+  height: 14px;
+  opacity: 0;
+  transform: rotate(45deg) scale(0);
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+  transition-delay: 0.15s;
+}
+
+.lbl {
+  margin-left: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#cbx1:checked ~ .cbx1 {
+  border-color: transparent;
+  background: #6871f1;
+  animation: jelly 0.6s ease;
+}
+
+#cbx1:checked ~ .cbx1:after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}
+
+#cbx2:checked ~ .cbx2 {
+  border-color: transparent;
+  background: #6871f1;
+  animation: jelly 0.6s ease;
+}
+
+#cbx2:checked ~ .cbx2:after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}
+
+#cbx3:checked ~ .cbx3 {
+  border-color: transparent;
+  background: #6871f1;
+  animation: jelly 0.6s ease;
+}
+
+#cbx3:checked ~ .cbx3:after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}
+.cntr {
+  position: relative;
+  padding-top: 7px;
+}
+
+@keyframes jelly {
+  from {
+    transform: scale(1, 1);
+  }
+
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+
+  50% {
+    transform: scale(1.15, 0.85);
+  }
+
+  65% {
+    transform: scale(0.95, 1.05);
+  }
+
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+.hidden-xs-up1 {
+  display: none !important;
+  margin-left: 30px;
+}
+
+.hidden-xs-up2 {
+  display: none !important;
+}
+.hidden-xs-up3 {
+  display: none !important;
+}
+.calendar {
+  width: fit-content;
+}
+
+
+
+.button-s {
+  display: inline-block;
+  background-color: #7b38d8;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 110px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button-s span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button-s span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button-s:hover {
+  background-color: #f7c2f9;
+}
+.button-s:hover span {
+  padding-right: 25px;
+}
+.button-s:hover span:after {
+  opacity: 1;
+  right: 0;
+}
